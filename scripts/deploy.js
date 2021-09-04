@@ -10,7 +10,7 @@ async function main() {
     const Token = await ethers.getContractFactory("EmojiPortal");
     const token = await Token.deploy();
 
-    console.log("WavePortal address:", token.address);
+    console.log("EmojiPortal address:", token.address);
 }
 
 main()
