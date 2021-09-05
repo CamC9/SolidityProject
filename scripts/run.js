@@ -8,18 +8,17 @@ async function main() {
     console.log("Contract deployed to: ", emojiContract.address);
     console.log("Contract deployed by: ", owner.address);
 
-    let emojiCount;
-    emojiCount = await emojiContract.getTotalEmojis();
+    let emojiCount = await emojiContract.getTotalEmojis();
+    console.log(emojiCount.toNumber());
 
-    let emojiTxn = await emojiContract.sendEmoji();
+    let emojiTxn = await emojiContract.sendEmoji("1st message!");
     await emojiTxn.wait();
 
-    emojiCount = await emojiContract.getTotalEmojis();
-
-    emojiTxn = await emojiContract.connect(randPerson).sendEmoji();
+    emojiTxn = await emojiContract.connect(randPerson).sendEmoji("2nd message!");
     await emojiTxn.wait();
 
-    emojiCount = await emojiContract.getTotalEmojis();
+    let allEmojis = await emojiContract.getAllSentEmojis();
+    console.log(allEmojis);
 }
 
 main()
