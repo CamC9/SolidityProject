@@ -1,7 +1,31 @@
-node_modules
-.env
-workspace.code-workspace
+/solidity-contract/node_modules
+
+/solidity-contract/.env
 
 #Hardhat files
-cache
-artifacts
+/solidity-contract/cache
+/solidity-contract/artifacts
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/solidity-react/node_modules
+/solidity-react/.pnp
+/solidity-react/.pnp.js
+
+# testing
+/solidity-react/coverage
+
+# production
+/solidity-react/build
+
+# misc
+/solidity-react/.DS_Store
+/solidity-react/.env.local
+/solidity-react/.env.development.local
+/solidity-react/.env.test.local
+/solidity-react/.env.production.local
+
+/solidity-react/npm-debug.log*
+/solidity-react/yarn-debug.log*
+/solidity-react/yarn-error.log*
